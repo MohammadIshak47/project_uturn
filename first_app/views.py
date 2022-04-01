@@ -1,4 +1,3 @@
-from django.forms import ModelForm
 from django.shortcuts import render
 from django.http import HttpResponse
 from first_app.models import Musician,Album

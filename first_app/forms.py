@@ -1,6 +1,7 @@
 
 from django import forms
 from first_app import models
+
 # class user_form(forms.Form):
     # user_name = forms.CharField(label='Full Name', widget=forms.TextInput(attrs={'placeholder':'Enter you full name'}))
     # user_email = forms.EmailField(label='User Email', widget=forms.TextInput(attrs={'placeholder':'Please,Enter your Email'}))
