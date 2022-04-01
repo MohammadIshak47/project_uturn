@@ -1,13 +1,7 @@
-from dataclasses import field
-from random import choices
-
-from django.core import validators
-
-
 
 from django import forms
-
-class user_form(forms.Form):
+from first_app import models
+# class user_form(forms.Form):
     # user_name = forms.CharField(label='Full Name', widget=forms.TextInput(attrs={'placeholder':'Enter you full name'}))
     # user_email = forms.EmailField(label='User Email', widget=forms.TextInput(attrs={'placeholder':'Please,Enter your Email'}))
     
@@ -20,9 +14,19 @@ class user_form(forms.Form):
   # choices = (('A','A'),('B','B'),('C','C'),('D','D'))
   # field = forms.ChoiceField(choices=choices,widget=forms.RadioSelect)
   
-   choices = (('A','A'),('B','B'),('C','C'),('D','D'))
-   field = forms.MultipleChoiceField(choices=choices,widget=forms.CheckboxSelectMultiple)
+  #  choices = (('A','A'),('B','B'),('C','C'),('D','D'))
+  #  field = forms.MultipleChoiceField(choices=choices,widget=forms.CheckboxSelectMultiple)
   
-        
+class MusicianForm(forms.ModelForm):
+  class meta:
+    model = models.Musician
+    fields = "__all__"
+    
+class AlbumForm(forms.ModelForm):
+  class meta:
+    model = models.Album
+    fields = "__all__"
+    
+  release_date =forms.DateField(widget=forms.TextInput(attrs={'type':'date'}))             
       
       
