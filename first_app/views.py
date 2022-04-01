@@ -7,13 +7,13 @@ from first_app import forms
 
 def index(request):
     diction = {'title':'Homepage'}
-    return render(request,'frist_app/index.html',context=diction)
+    return render(request,"frist_app/index.html",context=diction)
 def album_list(request,artist_id):
     diction = {'title':'List of Albums'}
-    return render(request,'first_app/album_list.html',context=diction)
+    return render(request,"first_app/album_list.html",context=diction)
 def musician_form(request):
     diction={'title':'Add Musician'}
-    return render(request,'first_app/musician_form.html',context=diction)
+    return render(request,"first_app/musician_form.html",context=diction)
 def album_form(request):
     diction={'title':'Add Album'}
-    return render(request,'first_app/album_form.html',context=diction)
+    return render(request,"first_app/album_form.html",context=diction)
