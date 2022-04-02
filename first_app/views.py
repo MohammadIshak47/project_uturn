@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from first_app.models import Musician,Album
+from first_app.forms import MusicianForm,AlbumForm
 from first_app import forms
+
 
 # Create your views here.
 
@@ -14,9 +16,7 @@ def album_list(request,artist_id):
     return render(request,'first_app/album_list.html',context=diction)
 def musician_form(request):
     form = forms.MusicianForm()
-    
-    
-    if request.method == 'POST':
+    if request.method == "POST":
         form = forms.MusicianForm(request.POST)
         if form.is_valid():
             form.save(commit=True)
